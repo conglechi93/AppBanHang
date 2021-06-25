@@ -1,58 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_height="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarthongtin"
-        app:title="Thông tin"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize">
-    </androidx.appcompat.widget.Toolbar>
-    <LinearLayout
-        android:layout_gravity="center"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:layout_gravity="center"
-            android:text="Thông tin về chúng tôi"
-            android:gravity="center"
-            android:textSize="30sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </TextView>
-        <LinearLayout
-            android:background="@drawable/boder"
-            android:layout_gravity="center"
-            android:layout_margin="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:gravity="center"
-                android:textSize="20sp"
-                android:layout_margin="30dp"
-                android:text="Địa chỉ: 54 Nguyễn Lương Bằng"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            </TextView>
-        </LinearLayout>
-        <LinearLayout
-            android:background="@drawable/boder"
-            android:layout_gravity="center"
-            android:layout_margin="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:map="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:id="@+id/map"
-            android:name="com.google.android.gms.maps.SupportMapFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".activity.ThongTinActivity" />
-        </LinearLayout>
-    </LinearLayout>
+    android:layout_height="match_parent"
+    tools:context=".ThongtinActivity">
 
-</LinearLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:background="#4CAF50" />
+
+    <fragment
+        android:id="@+id/fragment_map"
+        android:name="com.mitdom.thongtin.MyMapFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="204dp"
+        android:layout_below="@+id/txtChiDuong"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="107dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="104dp"
+        app:srcCompat="@drawable/bk_logo" />
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="179dp"
+        android:layout_below="@+id/txtInfor"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="0dp" />
+
+    <TextView
+        android:id="@+id/txtGioithieu"
+        android:layout_width="106dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="154dp"
+        android:drawableLeft="@drawable/ic_baseline_info_24"
+        android:text="ABOUT US: "
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtGioithieu"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="116dp"
+        android:text="Bachkhoashop.com"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/txtMail"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_below="@+id/txtSupport"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="120dp"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:text="Email: sales.online@bachkhoashop.com"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_below="@+id/txtMail"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="138dp"
+        android:drawableLeft="@drawable/ic_baseline_phone_iphone_24"
+        android:text="Phone: 0905.300.500"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtInfor"
+        android:layout_width="wrap_content"
+        android:layout_height="102dp"
+        android:layout_below="@+id/txtGioithieu"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="6dp"
+        android:lines="10"
+        android:text="      Công ty Máy tính Bách Khoa Computer (BKC) là một trong những Công ty tiên phong trong lĩnh vực kinh doanh thiết bị máy tính tại thị trường Việt Nam. BKC hiện là đối tác nhập khẩu và phân phối tin cậy của các hãng sản xuất máy tính lớn trên thế giới như: IBM- Lenovo, JVJ, Acer, ASUS, TOSHIBA, Dell, TP-LINK, Linksys, HP, CENIX, SAFA..."
+        android:textAlignment="gravity"
+        android:textSize="14sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/txtWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_below="@+id/txtPhone"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="138dp"
+        android:drawableLeft="@drawable/ic_baseline_language_24"
+        android:text="Web: http://www.bachkhoashop.com"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtHome"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_below="@+id/txtWeb"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="0dp"
+
+        android:drawableLeft="@drawable/ic_baseline_home_24"
+        android:text="Địa chỉ: 54 Nguyễn Lương Bằng, Liên Chiểu, Đà Nẵng"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtChiDuong"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewFlipper"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="249dp"
+        android:drawableLeft="@drawable/ic_baseline_directions_24"
+        android:text="Xem đường đi:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtSupport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_map"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="108dp"
+        android:drawableLeft="@drawable/ic_baseline_contact_support_24"
+        android:text="Contact Support:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
