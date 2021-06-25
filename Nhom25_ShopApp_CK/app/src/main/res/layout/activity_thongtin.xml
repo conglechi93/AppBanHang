@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ThongtinActivity">
+    >
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -16,7 +16,7 @@
 
     <fragment
         android:id="@+id/fragment_map"
-        android:name="com.mitdom.thongtin.MyMapFragment"
+        android:name="com.midterm.shopapp.Fragments.MyMapFragment"
         android:layout_width="wrap_content"
         android:layout_height="204dp"
         android:layout_below="@+id/txtChiDuong"

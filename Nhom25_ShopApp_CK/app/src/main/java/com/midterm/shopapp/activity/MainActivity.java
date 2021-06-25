@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
                             break;
                         case 4:
                             if(CheckConnection.haveNetWorkConnecttion(getApplicationContext())){
-                                Intent intent = new Intent(MainActivity.this,ThongTinActivity.class);
+                                Intent intent = new Intent(MainActivity.this,com.midterm.shopapp.activity.ThongtinActivity.class);
                                 startActivity(intent);
                                 drawerLayout.closeDrawer(GravityCompat.START);
 

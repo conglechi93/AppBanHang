@@ -21,7 +21,7 @@ public class ThongtinActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_thong_tin);
+        setContentView(R.layout.activity_thongtin);
 
         toolbar=findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
