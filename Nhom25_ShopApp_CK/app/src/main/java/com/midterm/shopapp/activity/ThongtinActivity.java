@@ -16,7 +16,7 @@ public class ThongtinActivity extends AppCompatActivity {
     private MyMapFragment myMapFragment;
     private Toolbar toolbar;
     ViewFlipper viewFlipper;
-    //int[] arrayHinh={R.drawable.cnbh,R.drawable.bachkhoashop,R.drawable.bkcpt,R.drawable.bkcpt1,R.drawable.nv1,R.drawable.nv2,R.drawable.nv3,R.drawable.nv4,R.drawable.nv6,R.drawable.bkcare,R.drawable.nv5,R.drawable.bkcare2,R.drawable.pt,R.drawable.pt2};
+    int[] arrayHinh={R.drawable.cnbh,R.drawable.bachkhoashop,R.drawable.bkcpt,R.drawable.bkcpt1,R.drawable.nv1,R.drawable.nv2,R.drawable.nv3,R.drawable.nv4,R.drawable.nv6,R.drawable.bkcare,R.drawable.nv5,R.drawable.bkcare2,R.drawable.pt,R.drawable.pt2};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,16 +35,16 @@ public class ThongtinActivity extends AppCompatActivity {
         });
         this.myMapFragment = (MyMapFragment) fragmentManager.findFragmentById(R.id.fragment_map);
 
-//        viewFlipper= (ViewFlipper) findViewById(R.id.viewFlipper);
-//        for(int i=0;i<arrayHinh.length;i++){
-//            ImageView imageView=new ImageView(this);
-//
-//            imageView.setImageResource(arrayHinh[i]);
-//            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-//            viewFlipper.addView(imageView);
-//        }
-//        viewFlipper.setFlipInterval(1000);
-//        viewFlipper.setAutoStart(true);
+        viewFlipper= (ViewFlipper) findViewById(R.id.viewFlipper);
+        for(int i=0;i<arrayHinh.length;i++){
+            ImageView imageView=new ImageView(this);
+
+            imageView.setImageResource(arrayHinh[i]);
+            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+            viewFlipper.addView(imageView);
+        }
+        viewFlipper.setFlipInterval(1000);
+        viewFlipper.setAutoStart(true);
 
     }
 }
