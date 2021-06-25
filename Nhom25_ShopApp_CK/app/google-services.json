@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "572825050254",
+    "firebase_url": "https://login-ea3ee-default-rtdb.firebaseio.com",
+    "project_id": "login-ea3ee",
+    "storage_bucket": "login-ea3ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572825050254:android:0cd29e37d9245d63b47ddf",
+        "android_client_info": {
+          "package_name": "com.midterm.shopapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "572825050254-jqcf78pqi9fbahngogeqtut9402qphr6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSlIMptA04WWjeV28CVccaCUqeKg3dDyg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "572825050254-jqcf78pqi9fbahngogeqtut9402qphr6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
