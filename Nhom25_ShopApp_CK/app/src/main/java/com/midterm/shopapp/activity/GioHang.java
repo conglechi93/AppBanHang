@@ -51,7 +51,8 @@ public class GioHang extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(MainActivity.manggiohang.size() > 0) {
-                    Intent intent = new Intent(getApplicationContext(),Thongtinkhachhang.class);
+                    CheckConnection.ShowToast_Short(getApplicationContext(),"Mua hàng thành công");
+                    Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                     startActivity(intent);
                 }
                 else {

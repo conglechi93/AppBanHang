@@ -9,22 +9,24 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-
-        android:background="#4CAF50" />
+        android:layout_height="40dp"
+        android:background="#009688" />
 
     <fragment
         android:id="@+id/fragment_map"
         android:name="com.midterm.shopapp.Fragments.MyMapFragment"
         android:layout_width="wrap_content"
-        android:layout_height="204dp"
+        android:layout_height="145dp"
         android:layout_below="@+id/txtChiDuong"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="0dp"
-        android:layout_marginEnd="18dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -35,22 +37,29 @@
         android:layout_height="107dp"
         android:layout_below="@+id/toolbar"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_marginStart="107dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginLeft="107dp"
+        android:layout_marginTop="2dp"
         android:layout_marginEnd="104dp"
+        android:layout_marginRight="104dp"
         app:srcCompat="@drawable/bk_logo" />
 
     <ViewFlipper
         android:id="@+id/viewFlipper"
         android:layout_width="match_parent"
-        android:layout_height="179dp"
+        android:layout_height="91dp"
         android:layout_below="@+id/txtInfor"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_marginStart="0dp"
         android:layout_marginTop="-5dp"
-        android:layout_marginEnd="0dp" />
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp" />
 
     <TextView
         android:id="@+id/txtGioithieu"
@@ -66,18 +75,28 @@
         android:text="ABOUT US: "
         android:textAlignment="center"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="154dp"
+        android:layout_marginLeft="151dp"
+        android:gravity="center_horizontal" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="172dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtGioithieu"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_marginStart="123dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="116dp"
+        android:layout_marginLeft="123dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginRight="105dp"
+        android:gravity="center_horizontal"
         android:text="Bachkhoashop.com"
         android:textAlignment="center"
         android:textSize="20sp"
@@ -89,10 +108,14 @@
         android:layout_height="21dp"
         android:layout_below="@+id/txtSupport"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="120dp"
+        android:layout_marginRight="120dp"
         android:drawableLeft="@drawable/ic_baseline_email_24"
         android:text="Email: sales.online@bachkhoashop.com"
         android:textStyle="bold" />
@@ -109,18 +132,20 @@
         android:layout_marginEnd="138dp"
         android:drawableLeft="@drawable/ic_baseline_phone_iphone_24"
         android:text="Phone: 0905.300.500"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp" />
 
     <TextView
         android:id="@+id/txtInfor"
         android:layout_width="wrap_content"
-        android:layout_height="102dp"
+        android:layout_height="105dp"
         android:layout_below="@+id/txtGioithieu"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="6dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="3dp"
         android:lines="10"
         android:text="      Công ty Máy tính Bách Khoa Computer (BKC) là một trong những Công ty tiên phong trong lĩnh vực kinh doanh thiết bị máy tính tại thị trường Việt Nam. BKC hiện là đối tác nhập khẩu và phân phối tin cậy của các hãng sản xuất máy tính lớn trên thế giới như: IBM- Lenovo, JVJ, Acer, ASUS, TOSHIBA, Dell, TP-LINK, Linksys, HP, CENIX, SAFA..."
         android:textAlignment="gravity"
@@ -164,7 +189,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="249dp"
         android:drawableLeft="@drawable/ic_baseline_directions_24"
         android:text="Xem đường đi:"
