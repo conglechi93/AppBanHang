@@ -1,12 +1,14 @@
 package com.midterm.shopapp.activity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -46,6 +48,13 @@ public class LienHeActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         profile_image = findViewById(R.id.profile_image);
         username = findViewById(R.id.username);
@@ -56,14 +65,14 @@ public class LienHeActivity extends AppCompatActivity {
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                User user = snapshot.getValue(User.class);
-                username.setText(user.getName());
-                if(user.getImage().equals("default")){
-                    profile_image.setImageResource(R.mipmap.ic_launcher);
-                }
-                else{
-                    Glide.with(LienHeActivity.this).load(user.getImage()).into(profile_image);
-                }
+//                User user = snapshot.getValue(User.class);
+//                username.setText(user.getName());
+//                if(user.getImage().equals("default")){
+//                    profile_image.setImageResource(R.mipmap.ic_launcher);
+//                }
+//                else{
+//                    Glide.with(LienHeActivity.this).load(user.getImage()).into(profile_image);
+//                }
             }
 
             @Override

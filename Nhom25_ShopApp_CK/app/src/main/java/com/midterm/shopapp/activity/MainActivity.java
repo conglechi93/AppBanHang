@@ -79,19 +79,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        startActivity(new Intent(MainActivity.this,LienHeActivity.class));
-//        AnhXa();
-//        if(CheckConnection.haveNetWorkConnecttion(getApplicationContext())){
-//            ActionBar();
-//            ActionViewFilper();
-//            GetDuLieuLoaiSP();
-//            GetDuLieuSPMoiNhat();
-//            CatchOnItemListView();
-//        }
-//        else {
-//            CheckConnection.ShowToast_Short(getApplicationContext(),"Bạn  hãy kiểm tra kết nối");
-//            finish();
-//        }
+        AnhXa();
+        if(CheckConnection.haveNetWorkConnecttion(getApplicationContext())){
+            ActionBar();
+            ActionViewFilper();
+            GetDuLieuLoaiSP();
+            GetDuLieuSPMoiNhat();
+            CatchOnItemListView();
+        }
+        else {
+            CheckConnection.ShowToast_Short(getApplicationContext(),"Bạn  hãy kiểm tra kết nối");
+            finish();
+        }
     }
 
     @Override
@@ -233,7 +232,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void ActionViewFilper() {
         ArrayList<String> mangquangcao = new ArrayList<>();
-        Log.d("a","da vao day");
         mangquangcao.add("https://photo-cms-viettimes.zadn.vn/w666/Uploaded/2021/aohuooh/2018_06_28/1_ivdd.jpg");
         mangquangcao.add("https://static.chotot.com/storage/chotot-kinhnghiem/c2c/2015/05/5-tieu-chi-quan-trong-de-chon-dien-thoai-chup-anh-dep-3.jpg");
         mangquangcao.add("https://tinhte.cdnforo.com/store/2014/08/2572609_Hinh_2.jpg");

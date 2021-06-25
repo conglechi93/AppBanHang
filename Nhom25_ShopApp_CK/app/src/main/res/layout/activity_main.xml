@@ -12,45 +12,80 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbarmanhinhchinh"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:title="Trang chính">
+                app:titleTextColor="@color/white"
+                app:title="Trang chính"
+                android:background="@color/blueSky">
             </androidx.appcompat.widget.Toolbar>
+
             <ViewFlipper
                 android:id="@+id/viewflipper"
                 android:layout_width="match_parent"
-                android:layout_height="200dp">
-            </ViewFlipper>
+                android:layout_height="158dp"></ViewFlipper>
             <LinearLayout
-                android:background="#5992d2"
+                android:background="@color/blueSky"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:layout_margin="5dp"
                     android:id="@+id/recycleview"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                </androidx.recyclerview.widget.RecyclerView>
+                    android:layout_width="401dp"
+                    android:layout_height="501dp"
+                    android:layout_margin="5dp"></androidx.recyclerview.widget.RecyclerView>
             </LinearLayout>
         </LinearLayout>
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/navigationview"
             android:layout_gravity="start"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <LinearLayout
-                android:layout_gravity="center"
+            android:layout_height="match_parent"
+
+            >
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-            </LinearLayout>
+                android:layout_height="160dp"
+                android:background="#fba63c">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </RelativeLayout>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_gravity="center"
+                    android:id="@+id/imageviewloaisp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/onlineshop_78377"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Get what you eye!"
+                    android:textStyle="italic"
+                    android:layout_marginTop="90dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="24sp"
+                    android:textColor="@color/white"
+
+                    ></TextView>
+
+            </RelativeLayout>
+
             <ListView
                 android:id="@+id/listviewmanhinhchinh"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="180dp">
             </ListView>
 
             <TextView

@@ -3,17 +3,26 @@ package com.midterm.shopapp.model;
 import android.widget.ImageView;
 
 public class User {
-    private String Email,Name,Phone,Password,Image;
+    private String Id,Email,Name,Phone,Password,Image;
 
     public User(){
 
     }
-    public User(String email, String name, String phone,String pass,String image) {
+    public User(String id,String email, String name, String phone,String pass,String image) {
+        Id = id;
         Email = email;
         Name = name;
         Phone = phone;
         Password = pass;
         Image = image;
+    }
+
+    public String getId() {
+        return Id;
+    }
+
+    public void setId(String id) {
+        Id = id;
     }
 
     public String getEmail() {

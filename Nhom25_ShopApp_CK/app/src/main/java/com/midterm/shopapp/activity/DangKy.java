@@ -123,7 +123,7 @@ public class DangKy extends AppCompatActivity {
             public void onSuccess(AuthResult authResult) {
                 String uid = mAuth.getUid();
                 HashMap<String,Object> hashMap = new HashMap<>();
-                hashMap.put("uid",uid);
+                hashMap.put("id",uid);
                 hashMap.put("email",Email);
                 hashMap.put("Password",Pass);
                 hashMap.put("Name",Name);
